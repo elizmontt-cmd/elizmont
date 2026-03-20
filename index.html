@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELIZ | Estrias & Clareamento Íntimo – Rio Branco, AC</title>
+  <meta name="description" content="Especialista em regeneração e saúde da pele, estrias e clareamento íntimo em Rio Branco – AC. Avaliação gratuita. Agende já!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --nude:    #f5ede6;
+      --rose:    #c9896a;
+      --rose-d:  #a8674d;
+      --dark:    #2a1f1a;
+      --mid:     #7a5c50;
+      --light:   #fdf8f5;
+      --white:   #ffffff;
+      --shadow:  0 8px 40px rgba(42,31,26,.10);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--light);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(253,248,245,.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(201,137,106,.18);
+      padding: 0 5vw;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem; font-weight: 600; letter-spacing: .12em;
+      color: var(--rose-d); text-decoration: none;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: .82rem; font-weight: 500; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--mid); text-decoration: none;
+      transition: color .2s;
+    }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-cta {
+      background: var(--rose); color: var(--white) !important;
+      padding: .45rem 1.2rem; border-radius: 2rem;
+      transition: background .2s !important;
+    }
+    .nav-cta:hover { background: var(--rose-d) !important; color: var(--white) !important; }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 24px; height: 2px; background: var(--rose-d); border-radius: 2px; transition: .3s; }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: 100vh;
+      display: flex; align-items: center;
+      background: linear-gradient(135deg, #f9f1ec 0%, #f0e0d6 60%, #e8ccbf 100%);
+      padding: 100px 5vw 60px;
+      position: relative; overflow: hidden;
+    }
+    #hero::before {
+      content: '';
+      position: absolute; top: -120px; right: -120px;
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(201,137,106,.22) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    #hero::after {
+      content: '';
+      position: absolute; bottom: -80px; left: -80px;
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(201,137,106,.14) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .hero-inner { max-width: 640px; position: relative; z-index: 1; }
+    .hero-tag {
+      display: inline-block;
+      font-size: .72rem; font-weight: 600; letter-spacing: .2em;
+      text-transform: uppercase; color: var(--rose);
+      background: rgba(201,137,106,.12); border: 1px solid rgba(201,137,106,.3);
+      padding: .35rem .9rem; border-radius: 2rem; margin-bottom: 1.4rem;
+    }
+    .hero-inner h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.2rem);
+      font-weight: 300; line-height: 1.18; color: var(--dark);
+      margin-bottom: 1.2rem;
+    }
+    .hero-inner h1 em { font-style: italic; color: var(--rose-d); }
+    .hero-inner p {
+      font-size: 1rem; font-weight: 300; line-height: 1.8;
+      color: var(--mid); margin-bottom: 2rem; max-width: 520px;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-primary {
+      background: var(--rose); color: var(--white);
+      padding: .85rem 2rem; border-radius: 2rem;
+      font-size: .88rem; font-weight: 500; letter-spacing: .08em;
+      text-decoration: none; transition: background .2s, transform .15s;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .btn-primary:hover { background: var(--rose-d); transform: translateY(-2px); }
+    .btn-outline {
+      border: 1.5px solid var(--rose); color: var(--rose);
+      padding: .85rem 2rem; border-radius: 2rem;
+      font-size: .88rem; font-weight: 500; letter-spacing: .08em;
+      text-decoration: none; transition: all .2s;
+      display: inline-flex; align-items: center; gap: .5rem;
+    }
+    .btn-outline:hover { background: var(--rose); color: var(--white); transform: translateY(-2px); }
+
+    /* ── SECTION WRAPPER ── */
+    section { padding: 90px 5vw; }
+    .section-label {
+      font-size: .72rem; font-weight: 600; letter-spacing: .22em;
+      text-transform: uppercase; color: var(--rose); margin-bottom: .6rem;
+    }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 300;
+      line-height: 1.2; color: var(--dark); margin-bottom: 1rem;
+    }
+    .section-sub {
+      font-size: .95rem; font-weight: 300; color: var(--mid);
+      line-height: 1.8; max-width: 560px; margin-bottom: 3rem;
+    }
+    .divider {
+      width: 48px; height: 2px; background: var(--rose);
+      border-radius: 2px; margin: 1.2rem 0 2.4rem;
+    }
+
+    /* ── ABOUT ── */
+    #sobre {
+      background: var(--white);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 5vw;
+      align-items: center;
+    }
+    .about-visual {
+      position: relative; border-radius: 2px;
+    }
+    .about-card {
+      background: linear-gradient(145deg, #f5ede6, #f0ddd3);
+      border-radius: 12px; padding: 3.5rem 3rem;
+      display: flex; flex-direction: column; justify-content: center;
+      min-height: 460px; position: relative; overflow: hidden;
+    }
+    .about-card::before {
+      content: '❋';
+      position: absolute; bottom: -20px; right: -10px;
+      font-size: 11rem; color: rgba(201,137,106,.1);
+      line-height: 1;
+    }
+    .about-card .since {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4rem; font-weight: 300; color: var(--rose);
+      line-height: 1; margin-bottom: .4rem;
+    }
+    .about-card .since-label {
+      font-size: .78rem; font-weight: 600; letter-spacing: .18em;
+      text-transform: uppercase; color: var(--mid);
+    }
+    .about-sep { width: 40px; height: 1px; background: var(--rose); margin: 1.8rem 0; }
+    .about-card p {
+      font-size: .95rem; font-weight: 300; line-height: 1.85; color: var(--mid);
+    }
+
+    .about-text .check-list { list-style: none; display: flex; flex-direction: column; gap: .9rem; }
+    .about-text .check-list li {
+      display: flex; align-items: flex-start; gap: .75rem;
+      font-size: .95rem; font-weight: 300; color: var(--mid); line-height: 1.6;
+    }
+    .check-icon {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: rgba(201,137,106,.15); border: 1.5px solid var(--rose);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .check-icon svg { width: 11px; height: 11px; stroke: var(--rose); fill: none; stroke-width: 2.5; }
+
+    /* ── SERVICES ── */
+    #servicos { background: var(--light); text-align: center; }
+    #servicos .section-sub { margin-left: auto; margin-right: auto; }
+    #servicos .divider { margin-left: auto; margin-right: auto; }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 1.6rem; margin-top: 1rem;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid rgba(201,137,106,.15);
+      border-radius: 12px; padding: 2.4rem 2rem;
+      text-align: left; transition: box-shadow .2s, transform .2s;
+      position: relative; overflow: hidden;
+    }
+    .card::after {
+      content: '';
+      position: absolute; bottom: 0; left: 0; right: 0;
+      height: 3px; background: linear-gradient(90deg, var(--rose), var(--rose-d));
+      transform: scaleX(0); transition: transform .3s; transform-origin: left;
+    }
+    .card:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+    .card:hover::after { transform: scaleX(1); }
+    .card-icon {
+      width: 52px; height: 52px; border-radius: 12px;
+      background: linear-gradient(135deg, #f5ede6, #ead0c2);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.4rem; font-size: 1.5rem;
+    }
+    .card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.32rem; font-weight: 600; color: var(--dark);
+      margin-bottom: .6rem;
+    }
+    .card p { font-size: .88rem; font-weight: 300; color: var(--mid); line-height: 1.75; }
+
+    /* ── DIFERENCIAL ── */
+    #diferencial {
+      background: linear-gradient(135deg, var(--rose-d) 0%, #8a4f38 100%);
+      color: var(--white); text-align: center;
+    }
+    #diferencial .section-label { color: rgba(255,255,255,.7); }
+    #diferencial .section-title { color: var(--white); }
+    #diferencial .section-sub { color: rgba(255,255,255,.8); margin-left: auto; margin-right: auto; }
+    #diferencial .divider { background: rgba(255,255,255,.5); margin: 1.2rem auto 2.4rem; }
+    .diff-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.4rem; margin-top: 1rem;
+    }
+    .diff-item {
+      background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2);
+      border-radius: 12px; padding: 2rem 1.5rem;
+      transition: background .2s;
+    }
+    .diff-item:hover { background: rgba(255,255,255,.16); }
+    .diff-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem; font-weight: 300; color: rgba(255,255,255,.35);
+      line-height: 1; margin-bottom: .6rem;
+    }
+    .diff-item h4 {
+      font-size: .92rem; font-weight: 600; letter-spacing: .06em;
+      margin-bottom: .5rem; color: var(--white);
+    }
+    .diff-item p { font-size: .83rem; font-weight: 300; color: rgba(255,255,255,.75); line-height: 1.7; }
+
+    /* ── HORÁRIOS ── */
+    #horarios { background: var(--white); }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5vw; }
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px solid rgba(201,137,106,.12); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td {
+      padding: .85rem 0; font-size: .92rem; font-weight: 300; color: var(--mid);
+    }
+    .hours-table td:first-child { font-weight: 500; color: var(--dark); text-transform: capitalize; }
+    .hours-table td:last-child { text-align: right; }
+    .badge-open {
+      display: inline-block; font-size: .7rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      background: rgba(201,137,106,.14); color: var(--rose);
+      border: 1px solid rgba(201,137,106,.3);
+      padding: .2rem .65rem; border-radius: 2rem;
+    }
+    .badge-closed {
+      display: inline-block; font-size: .7rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      background: rgba(0,0,0,.05); color: #aaa;
+      border: 1px solid rgba(0,0,0,.08);
+      padding: .2rem .65rem; border-radius: 2rem;
+    }
+    .contact-box { display: flex; flex-direction: column; gap: 1rem; }
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 1rem;
+      padding: 1.2rem 1.4rem;
+      background: var(--light); border-radius: 10px;
+      border: 1px solid rgba(201,137,106,.12);
+      text-decoration: none; transition: box-shadow .2s, border-color .2s;
+    }
+    .contact-item:hover { box-shadow: var(--shadow); border-color: rgba(201,137,106,.35); }
+    .contact-item-icon {
+      width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+      background: linear-gradient(135deg, #f5ede6, #ead0c2);
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+    .contact-item-text strong {
+      display: block; font-size: .83rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: var(--rose); margin-bottom: .2rem;
+    }
+    .contact-item-text span { font-size: .92rem; font-weight: 300; color: var(--mid); }
+
+    /* ── CTA BANNER ── */
+    #cta {
+      background: linear-gradient(135deg, #f9f1ec 0%, #f0ddd3 100%);
+      text-align: center; padding: 80px 5vw;
+    }
+    #cta .section-title { margin-bottom: .8rem; }
+    #cta p { font-size: .95rem; font-weight: 300; color: var(--mid); margin-bottom: 2rem; line-height: 1.8; }
+    #cta .divider { margin: 0 auto 2rem; }
+
+    /* ── TESTIMONIALS ── */
+    #depoimentos { background: var(--white); text-align: center; }
+    #depoimentos .section-sub { margin-left: auto; margin-right: auto; }
+    #depoimentos .divider { margin-left: auto; margin-right: auto; }
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.6rem; margin-top: 1rem;
+    }
+    .testi-card {
+      background: var(--light);
+      border: 1px solid rgba(201,137,106,.15);
+      border-radius: 12px; padding: 2rem 1.8rem;
+      text-align: left; position: relative;
+      transition: box-shadow .2s, transform .2s;
+    }
+    .testi-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .testi-stars { color: var(--rose); font-size: 1rem; letter-spacing: .1em; margin-bottom: 1rem; }
+    .testi-card blockquote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.08rem; font-weight: 400; font-style: italic;
+      color: var(--dark); line-height: 1.75; margin-bottom: 1.4rem;
+    }
+    .testi-card blockquote::before { content: '\201C'; color: var(--rose); font-size: 1.6rem; line-height: 0; vertical-align: -.4rem; margin-right: .2rem; }
+    .testi-card blockquote::after  { content: '\201D'; color: var(--rose); font-size: 1.6rem; line-height: 0; vertical-align: -.4rem; margin-left: .2rem; }
+    .testi-author { display: flex; align-items: center; gap: .9rem; }
+    .testi-avatar {
+      width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, #f5ede6, #d9a48a);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem; font-weight: 600; color: var(--rose-d);
+    }
+    .testi-author-info strong { display: block; font-size: .88rem; font-weight: 600; color: var(--dark); }
+    .testi-author-info span   { font-size: .78rem; font-weight: 300; color: var(--mid); }
+    .testi-badge {
+      position: absolute; top: 1.2rem; right: 1.2rem;
+      background: rgba(201,137,106,.1); border: 1px solid rgba(201,137,106,.25);
+      border-radius: 2rem; padding: .18rem .6rem;
+      font-size: .65rem; font-weight: 600; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--rose);
+    }
+
+    /* ── BLOG ── */
+    #blog { background: var(--light); }
+    #blog .section-sub { max-width: 560px; }
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 1.8rem; margin-top: 1rem;
+    }
+    .blog-card {
+      background: var(--white);
+      border: 1px solid rgba(201,137,106,.15);
+      border-radius: 14px; overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: box-shadow .25s, transform .25s;
+    }
+    .blog-card:hover { box-shadow: var(--shadow); transform: translateY(-5px); }
+    .blog-thumb {
+      height: 190px; position: relative; overflow: hidden;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .blog-thumb-bg {
+      position: absolute; inset: 0;
+      background-size: cover; background-position: center;
+      transition: transform .4s ease;
+    }
+    .blog-card:hover .blog-thumb-bg { transform: scale(1.04); }
+    .blog-thumb-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(42,31,26,.45) 100%);
+    }
+    .blog-cat {
+      position: absolute; top: 1rem; left: 1rem;
+      font-size: .66rem; font-weight: 600; letter-spacing: .15em;
+      text-transform: uppercase; color: var(--white);
+      background: var(--rose); padding: .28rem .75rem; border-radius: 2rem;
+    }
+    .blog-read-time {
+      position: absolute; bottom: .9rem; right: 1rem;
+      font-size: .7rem; font-weight: 400; color: rgba(255,255,255,.85);
+      display: flex; align-items: center; gap: .35rem;
+    }
+    .blog-read-time svg { width: 11px; height: 11px; stroke: rgba(255,255,255,.85); fill: none; stroke-width: 2; }
+    .blog-body { padding: 1.6rem 1.6rem 1.8rem; flex: 1; display: flex; flex-direction: column; }
+    .blog-date { font-size: .75rem; font-weight: 300; color: var(--rose); margin-bottom: .6rem; letter-spacing: .05em; }
+    .blog-body h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.22rem; font-weight: 600; color: var(--dark);
+      line-height: 1.35; margin-bottom: .75rem;
+    }
+    .blog-body p { font-size: .87rem; font-weight: 300; color: var(--mid); line-height: 1.75; flex: 1; }
+    .blog-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-top: 1.3rem; padding-top: 1rem;
+      border-top: 1px solid rgba(201,137,106,.12);
+    }
+    .blog-author { display: flex; align-items: center; gap: .6rem; }
+    .blog-avatar {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: linear-gradient(135deg, #f5ede6, #d9a48a);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: .9rem; font-weight: 600; color: var(--rose-d);
+    }
+    .blog-author span { font-size: .78rem; font-weight: 400; color: var(--mid); }
+    .blog-link {
+      font-size: .78rem; font-weight: 500; color: var(--rose);
+      text-decoration: none; letter-spacing: .05em;
+      display: flex; align-items: center; gap: .3rem;
+      transition: gap .2s, color .2s;
+    }
+    .blog-link:hover { color: var(--rose-d); gap: .55rem; }
+    .blog-link svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2.5; }
+    .blog-coming {
+      text-align: center; margin-top: 2.5rem;
+      font-size: .88rem; font-weight: 300; color: var(--mid);
+    }
+    .blog-coming a { color: var(--rose); text-decoration: none; font-weight: 500; }
+    .blog-coming a:hover { color: var(--rose-d); }
+
+    /* ── FAQ ── */
+    #faq { background: var(--light); }
+    .faq-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 5vw; align-items: start; }
+    .faq-list { display: flex; flex-direction: column; gap: .8rem; }
+    .faq-item {
+      background: var(--white);
+      border: 1px solid rgba(201,137,106,.15);
+      border-radius: 10px; overflow: hidden;
+      transition: box-shadow .2s;
+    }
+    .faq-item:hover { box-shadow: var(--shadow); }
+    .faq-question {
+      width: 100%; background: none; border: none; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: 1.2rem 1.5rem; text-align: left;
+    }
+    .faq-question span {
+      font-size: .95rem; font-weight: 500; color: var(--dark); line-height: 1.4;
+    }
+    .faq-icon {
+      width: 28px; height: 28px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(201,137,106,.12); border: 1.5px solid rgba(201,137,106,.3);
+      display: flex; align-items: center; justify-content: center;
+      transition: background .2s, transform .3s;
+    }
+    .faq-icon svg { width: 12px; height: 12px; stroke: var(--rose); fill: none; stroke-width: 2.5; transition: transform .3s; }
+    .faq-item.open .faq-icon { background: var(--rose); }
+    .faq-item.open .faq-icon svg { stroke: #fff; transform: rotate(45deg); }
+    .faq-answer {
+      max-height: 0; overflow: hidden;
+      transition: max-height .35s ease, padding .3s ease;
+      padding: 0 1.5rem;
+    }
+    .faq-answer p {
+      font-size: .9rem; font-weight: 300; color: var(--mid);
+      line-height: 1.8; padding-bottom: 1.3rem;
+    }
+    .faq-item.open .faq-answer { max-height: 300px; }
+    .faq-highlight {
+      background: linear-gradient(135deg, var(--rose-d), #8a4f38);
+      border-radius: 12px; padding: 2.8rem 2.4rem;
+      color: var(--white); position: sticky; top: 80px;
+    }
+    .faq-highlight h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.7rem; font-weight: 300; margin-bottom: 1rem; line-height: 1.3;
+    }
+    .faq-highlight p { font-size: .9rem; font-weight: 300; color: rgba(255,255,255,.8); line-height: 1.8; margin-bottom: 1.8rem; }
+    .faq-highlight .btn-primary { background: rgba(255,255,255,.18); border: 1.5px solid rgba(255,255,255,.45); }
+    .faq-highlight .btn-primary:hover { background: rgba(255,255,255,.28); }
+
+    @media (max-width: 860px) {
+      .faq-inner { grid-template-columns: 1fr; }
+      .faq-highlight { position: static; }
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--dark); color: rgba(255,255,255,.55);
+      text-align: center; padding: 2rem 5vw;
+      font-size: .78rem; font-weight: 300; letter-spacing: .06em;
+    }
+    footer a { color: var(--rose); text-decoration: none; }
+    footer a:hover { color: #e8a88a; }
+
+    /* ── WHATSAPP FLOAT ── */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 200;
+      width: 58px; height: 58px; border-radius: 50%;
+      background: #25d366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.45);
+      text-decoration: none; transition: transform .2s, box-shadow .2s;
+    }
+    .wa-float:hover { transform: scale(1.08); box-shadow: 0 6px 28px rgba(37,211,102,.55); }
+    .wa-float svg { width: 28px; height: 28px; fill: #fff; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 860px) {
+      #sobre { grid-template-columns: 1fr; }
+      .info-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; flex-direction: column; position: fixed; top: 64px; left: 0; right: 0; background: rgba(253,248,245,.97); padding: 1.5rem 5vw 2rem; gap: 1.2rem; border-bottom: 1px solid rgba(201,137,106,.18); }
+      .nav-links.open { display: flex; }
+      .hamburger { display: flex; }
+    }
+    @media (max-width: 560px) {
+      .about-card { padding: 2.5rem 1.8rem; min-height: auto; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-outline { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#hero">ELIZ</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#depoimentos">Depoimentos</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#faq">FAQ</a></li>
+    <li><a href="#horarios">Contato</a></li>
+    <li><a href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" class="nav-cta">Agendar</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-inner">
+    <span class="hero-tag">Rio Branco · Acre · Desde 2021</span>
+    <h1>Sua pele merece<br>cuidado <em>especializado</em></h1>
+    <p>Especialista em estrias, clareamento íntimo e regeneração da pele. Tratamentos únicos, desenvolvidos de forma individual — porque cada pele conta uma história diferente.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Agendar Avaliação Gratuita
+      </a>
+      <a href="#servicos" class="btn-outline">Ver Tratamentos</a>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="about-visual">
+    <div class="about-card">
+      <span class="since">2021</span>
+      <span class="since-label">Atuando em Rio Branco</span>
+      <div class="about-sep"></div>
+      <p>Cada atendimento nasce de uma avaliação individual. Não trabalho com protocolos engessados — desenvolvo um plano exclusivo para potencializar seus resultados com mais segurança e eficácia.</p>
+    </div>
+  </div>
+  <div class="about-text">
+    <p class="section-label">Sobre Eliz</p>
+    <h2 class="section-title">Tecnologia e cuidado<br>em cada procedimento</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Trabalho com tecnologias modernas e técnicas combinadas, sempre escolhidas de acordo com a necessidade de cada paciente — porque aqui, cada tratamento é único.</p>
+    <ul class="check-list">
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        Redução visível na aparência das estrias
+      </li>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        Clareamento de regiões íntimas — virilha, axilas, interno das coxas, glúteos e mais
+      </li>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        Rejuvenescimento e melhora da textura da pele íntima
+      </li>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        Avaliação individual gratuita antes de cada tratamento
+      </li>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 12 12"><polyline points="2,6 5,9 10,3"/></svg></span>
+        Protocolos combinados para resultados mais rápidos e duradouros
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- SERVIÇOS -->
+<section id="servicos">
+  <p class="section-label">Tratamentos</p>
+  <h2 class="section-title">O que ofereço</h2>
+  <div class="divider"></div>
+  <p class="section-sub">Procedimentos selecionados individualmente para potencializar os resultados com segurança e eficácia.</p>
+  <div class="cards-grid">
+    <div class="card">
+      <div class="card-icon">✦</div>
+      <h3>Tratamento de Estrias</h3>
+      <p>Redução visível na aparência das estrias com tecnologias modernas e protocolos combinados, adaptados ao tipo e estágio de cada estria.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">◈</div>
+      <h3>Clareamento Íntimo</h3>
+      <p>Clareamento seguro e eficaz de virilha, axilas, interno das coxas, glúteos e outras regiões — com técnicas que respeitam a sensibilidade da pele.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">❋</div>
+      <h3>Rejuvenescimento da Pele</h3>
+      <p>Melhora da textura, firmeza e aparência da pele íntima, com foco em regeneração celular e saúde cutânea de dentro para fora.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">◇</div>
+      <h3>Avaliação Personalizada</h3>
+      <p>Antes de qualquer procedimento, realizo uma avaliação gratuita e individual para entender suas necessidades e criar um plano exclusivo para você.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAL -->
+<section id="diferencial">
+  <p class="section-label">Por que escolher</p>
+  <h2 class="section-title">O diferencial ELIZ</h2>
+  <div class="divider"></div>
+  <p class="section-sub">Aqui você não é mais uma paciente — você é única, e seu tratamento também é.</p>
+  <div class="diff-grid">
+    <div class="diff-item">
+      <div class="diff-num">01</div>
+      <h4>Avaliação Gratuita</h4>
+      <p>Conheça seu plano antes de investir. A avaliação inicial é sem custo e sem compromisso.</p>
+    </div>
+    <div class="diff-item">
+      <div class="diff-num">02</div>
+      <h4>Protocolos Individuais</h4>
+      <p>Nenhum tratamento é igual ao outro. Cada protocolo é criado especialmente para você.</p>
+    </div>
+    <div class="diff-item">
+      <div class="diff-num">03</div>
+      <h4>Tecnologia Moderna</h4>
+      <p>Equipamentos e técnicas atualizadas para resultados mais rápidos, seguros e duradouros.</p>
+    </div>
+    <div class="diff-item">
+      <div class="diff-num">04</div>
+      <h4>Experiência desde 2021</h4>
+      <p>Anos de prática em Rio Branco e centenas de pacientes satisfeitas com os resultados.</p>
+    </div>
+  </div>
+</section>
+
+<!-- HORÁRIOS & CONTATO -->
+<section id="horarios">
+  <div class="info-grid">
+    <div>
+      <p class="section-label">Funcionamento</p>
+      <h2 class="section-title">Horários de Atendimento</h2>
+      <div class="divider"></div>
+      <table class="hours-table">
+        <tbody>
+          <tr><td>Segunda-feira</td><td><span class="badge-closed">Fechado</span></td></tr>
+          <tr><td>Terça-feira</td><td><span class="badge-open">09:00 – 18:00</span></td></tr>
+          <tr><td>Quarta-feira</td><td><span class="badge-open">09:00 – 18:00</span></td></tr>
+          <tr><td>Quinta-feira</td><td><span class="badge-open">09:00 – 18:00</span></td></tr>
+          <tr><td>Sexta-feira</td><td><span class="badge-open">09:00 – 18:00</span></td></tr>
+          <tr><td>Sábado</td><td><span class="badge-open">09:00 – 16:00</span></td></tr>
+          <tr><td>Domingo</td><td><span class="badge-closed">Fechado</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <p class="section-label">Fale Comigo</p>
+      <h2 class="section-title">Contato & Localização</h2>
+      <div class="divider"></div>
+      <div class="contact-box">
+        <a class="contact-item" href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank">
+          <div class="contact-item-icon">💬</div>
+          <div class="contact-item-text">
+            <strong>WhatsApp</strong>
+            <span>(68) 99968-6239 — Agendar agora</span>
+          </div>
+        </a>
+        <a class="contact-item" href="https://www.instagram.com/eliizmt" target="_blank">
+          <div class="contact-item-icon">📸</div>
+          <div class="contact-item-text">
+            <strong>Instagram</strong>
+            <span>@eliizmt — Veja resultados reais</span>
+          </div>
+        </a>
+        <a class="contact-item" href="https://maps.google.com/?q=R.+Novo+Horizonte,+260+-+Nova+Estação,+Rio+Branco+-+AC" target="_blank">
+          <div class="contact-item-icon">📍</div>
+          <div class="contact-item-text">
+            <strong>Endereço</strong>
+            <span>R. Novo Horizonte, 260 – Nova Estação<br>Rio Branco – AC, 69918-392</span>
+          </div>
+        </a>
+        <a class="contact-item" href="tel:+5568999686239">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <strong>Telefone</strong>
+            <span>(68) 99968-6239</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos">
+  <p class="section-label">Depoimentos</p>
+  <h2 class="section-title">O que minhas pacientes dizem</h2>
+  <div class="divider"></div>
+  <p class="section-sub">Resultados reais de quem confiou no meu trabalho e transformou a relação com o próprio corpo.</p>
+  <div class="testi-grid">
+
+    <div class="testi-card">
+      <span class="testi-badge">Google</span>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>Fiz o tratamento de estrias e os resultados superaram minhas expectativas. A Eliz é super atenciosa, explicou tudo antes de começar e o ambiente é muito aconchegante. Me sinto muito mais confiante!</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">A</div>
+        <div class="testi-author-info">
+          <strong>Ana Paula</strong>
+          <span>Tratamento de Estrias</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-badge">Google</span>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>Fiz clareamento de virilha e axila e estou amando o resultado! A Eliz passou segurança desde a avaliação. Profissional dedicada, que realmente personaliza o tratamento pra cada uma.</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">J</div>
+        <div class="testi-author-info">
+          <strong>Juliana M.</strong>
+          <span>Clareamento Íntimo</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-badge">Google</span>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>Melhor investimento que já fiz! Tinha vergonha das minhas estrias há anos e hoje me olho no espelho sem esse peso. A avaliação gratuita me deu confiança pra começar. Recomendo demais!</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">F</div>
+        <div class="testi-author-info">
+          <strong>Fernanda C.</strong>
+          <span>Tratamento de Estrias</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-badge">Google</span>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>Atendimento humanizado e resultado visível já nas primeiras sessões. Ela não empurra protocolo — entende o que você precisa e monta um plano real. Lugar limpo, organizado e muito acolhedor.</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">R</div>
+        <div class="testi-author-info">
+          <strong>Renata S.</strong>
+          <span>Rejuvenescimento da Pele</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-badge">Google</span>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>A Eliz é incrível! Fui sem muita esperança pois já tinha tentado outros tratamentos sem sucesso. Ela fez uma análise completa e o meu caso evoluiu muito bem. Gratidão enorme!</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">M</div>
+        <div class="testi-author-info">
+          <strong>Mariana L.</strong>
+          <span>Tratamento de Estrias</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="testi-card">
+      <span class="testi-badge">Google</span>
+      <div class="testi-stars">★★★★★</div>
+      <blockquote>Super indico! Fiz clareamento de interno de coxas e glúteos. Profissional séria, discreta e muito competente. Me sinto muito mais à vontade com meu corpo. Obrigada, Eliz!</blockquote>
+      <div class="testi-author">
+        <div class="testi-avatar">C</div>
+        <div class="testi-author-info">
+          <strong>Camila R.</strong>
+          <span>Clareamento Íntimo</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <p class="section-label">Blog & Dicas</p>
+  <h2 class="section-title">Conteúdo sobre saúde da pele</h2>
+  <div class="divider"></div>
+  <p class="section-sub">Informação de qualidade para você entender melhor o seu corpo e tomar decisões conscientes sobre seus tratamentos.</p>
+  <div class="blog-grid">
+
+    <div class="blog-card">
+      <div class="blog-thumb">
+        <div class="blog-thumb-bg" style="background: linear-gradient(135deg, #e8ccbf 0%, #c9896a 100%);"></div>
+        <div class="blog-thumb-overlay"></div>
+        <span class="blog-cat">Estrias</span>
+        <span class="blog-read-time">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          5 min de leitura
+        </span>
+      </div>
+      <div class="blog-body">
+        <p class="blog-date">Março 2025</p>
+        <h3>Estrias brancas x estrias roxas: qual a diferença e como tratar cada uma?</h3>
+        <p>Entenda por que a cor das estrias indica o estágio de cicatrização da pele e como cada fase responde de forma diferente aos tratamentos estéticos.</p>
+        <div class="blog-footer">
+          <div class="blog-author">
+            <div class="blog-avatar">E</div>
+            <span>Por Eliz</span>
+          </div>
+          <a href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" class="blog-link">
+            Saiba mais <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-thumb">
+        <div class="blog-thumb-bg" style="background: linear-gradient(135deg, #f0ddd3 0%, #a8674d 100%);"></div>
+        <div class="blog-thumb-overlay"></div>
+        <span class="blog-cat">Clareamento</span>
+        <span class="blog-read-time">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          4 min de leitura
+        </span>
+      </div>
+      <div class="blog-body">
+        <p class="blog-date">Fevereiro 2025</p>
+        <h3>Por que a pele íntima escurece? Causas e como reverter com segurança</h3>
+        <p>Hormônios, atrito, desodorantes e até depilação podem escurecer regiões como virilha e axilas. Descubra as causas e o que pode ser feito de forma segura.</p>
+        <div class="blog-footer">
+          <div class="blog-author">
+            <div class="blog-avatar">E</div>
+            <span>Por Eliz</span>
+          </div>
+          <a href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" class="blog-link">
+            Saiba mais <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-card">
+      <div class="blog-thumb">
+        <div class="blog-thumb-bg" style="background: linear-gradient(135deg, #f5ede6 0%, #c07a5a 100%);"></div>
+        <div class="blog-thumb-overlay"></div>
+        <span class="blog-cat">Cuidados</span>
+        <span class="blog-read-time">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          6 min de leitura
+        </span>
+      </div>
+      <div class="blog-body">
+        <p class="blog-date">Janeiro 2025</p>
+        <h3>5 hábitos que prejudicam o resultado do seu tratamento de estrias</h3>
+        <p>Hidratação inadequada, sol sem proteção e dieta pobre em proteínas podem comprometer (e muito) a eficácia dos seus tratamentos. Veja o que evitar.</p>
+        <div class="blog-footer">
+          <div class="blog-author">
+            <div class="blog-avatar">E</div>
+            <span>Por Eliz</span>
+          </div>
+          <a href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" class="blog-link">
+            Saiba mais <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <p class="blog-coming">Quer receber novos conteúdos? Siga no Instagram: <a href="https://www.instagram.com/eliizmt" target="_blank">@eliizmt</a></p>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="faq-inner">
+    <div class="faq-highlight">
+      <h3>Ainda tem dúvidas?</h3>
+      <p>Entre em contato pelo WhatsApp — respondo rapidinho e podemos conversar sobre o seu caso com calma, sem compromisso.</p>
+      <a href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" class="btn-primary">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+    <div>
+      <p class="section-label">Dúvidas Frequentes</p>
+      <h2 class="section-title">Perguntas & Respostas</h2>
+      <div class="divider"></div>
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>A avaliação realmente é gratuita?</span>
+            <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+          </button>
+          <div class="faq-answer"><p>Sim, 100% gratuita e sem compromisso. Na avaliação, analiso sua pele, entendo seu histórico e suas expectativas, e apresento um plano de tratamento personalizado. Só depois disso você decide se quer iniciar.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Quantas sessões são necessárias para ver resultado?</span>
+            <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+          </button>
+          <div class="faq-answer"><p>Depende de cada caso — tipo de estria, tom de pele, área a ser tratada e resposta individual ao tratamento. Por isso faço uma avaliação antes: para te dar uma estimativa real, não um número genérico.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>O tratamento de clareamento íntimo é seguro?</span>
+            <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+          </button>
+          <div class="faq-answer"><p>Sim. Trabalho com técnicas e produtos específicos para regiões sensíveis, selecionados de acordo com o tipo de pele de cada paciente. A segurança e o conforto são prioridade em todos os atendimentos.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Posso tratar estrias antigas e recentes?</span>
+            <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+          </button>
+          <div class="faq-answer"><p>Sim, ambas têm tratamento. Estrias recentes (avermelhadas) tendem a responder mais rapidamente, mas estrias antigas (brancas) também apresentam melhora visível com os protocolos certos. Na avaliação consigo te mostrar o que esperar para o seu caso.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Os procedimentos doem?</span>
+            <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+          </button>
+          <div class="faq-answer"><p>A maioria dos procedimentos é indolor ou causa apenas um leve desconforto. Quando necessário, utilizamos recursos para minimizar qualquer sensação. O conforto da paciente é sempre levado em consideração.</p></div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>Como faço para agendar?</span>
+            <div class="faq-icon"><svg viewBox="0 0 12 12"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></div>
+          </button>
+          <div class="faq-answer"><p>É simples: entre em contato pelo WhatsApp (68) 99968-6239 ou clique no botão de agendamento neste site. Respondo durante o horário de atendimento e agendamos sua avaliação gratuita o mais rápido possível.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section id="cta">
+  <p class="section-label">Avaliação Gratuita</p>
+  <h2 class="section-title">Pronta para transformar sua pele?</h2>
+  <div class="divider"></div>
+  <p>Entre em contato agora e agende sua avaliação gratuita.<br>Sem compromisso — só cuidado, ciência e resultados reais.</p>
+  <a href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" class="btn-primary" style="display:inline-flex">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+    Quero minha avaliação gratuita
+  </a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 <strong style="color:rgba(255,255,255,.75)">ELIZ</strong> · Estrias & Clareamento Íntimo · Rio Branco, Acre</p>
+  <p style="margin-top:.5rem">
+    <a href="https://www.instagram.com/eliizmt" target="_blank">@eliizmt</a>
+    &nbsp;·&nbsp;
+    <a href="tel:+5568999686239">(68) 99968-6239</a>
+  </p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a class="wa-float" href="https://wa.me/message/YMIEF2YHGOEWD1" target="_blank" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+</a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById('navLinks').classList.toggle('open');
+  }
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    a.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+  });
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+</script>
+</body>
+</html>
